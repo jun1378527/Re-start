@@ -1,0 +1,15 @@
+p{
+    font-size: 30px;
+    font-family: 궁서, 굴림, 돋움;
+    font-style: italic;
+}
+
+.nanum-pen{
+    font-family: "Nanum Pen Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.rgb{color:rgb(136, 78, 78);}
+.rgba{color: rgba(44, 168, 92, 0.685)}
+.hsl{color: hsl(55, 45%, 58%);}

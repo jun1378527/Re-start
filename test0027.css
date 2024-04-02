@@ -1,0 +1,87 @@
+
+.navi ul li {
+    float: left;
+    width: 150px;
+    padding: 10px;
+}
+.navi a:link, .navi a:visited
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+body {
+    padding-top: 50px; 
+}
+
+#intro:target{background-color: antiquewhite;}
+#room:target{background-color: antiquewhite;}
+#intro:target{background-color: antiquewhite;}
+#intro:target{background-color: antiquewhite;}
+
+.navi {
+    font-size: 10px;
+    background-color: #fff; 
+    color: #000; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid #000; 
+}
+
+.navi ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; 
+}
+
+.navi ul li {
+    display: inline-block; 
+}
+
+.navi ul li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+.navi ul li a:hover {
+    background-color: #000; 
+    color: white; 
+}
+
+
+.navi ul li a:active {
+    background-color: #f00; 
+    color: #fff; 
+}
+
+
+a {
+    color: dodgerblue;
+}
+
+input[type="text"] {
+    margin: 10px 0;
+    padding: 10px;
+    width: calc(100% - 22px); 
+    box-sizing: border-box; 
+}
+
+textarea:disabled{
+    background-color: bisque;
+}
+
+input:checked + label{color: red;}
+
+#room-type{list-style: none;}
+
+input:not([type=radio]){border: 1px solid blue}

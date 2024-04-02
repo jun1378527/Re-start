@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .border-test{
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+            border: 10px;
+        }
+        .img-border{
+            width: 200px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        #border-style1{border-style:none}
+        #border-style2{border-style:hidden}
+        #border-style3{border-style:solid}
+        #border-style4{border-style:dotted}
+        #border-style5{border-style:dashed}
+        #border-style6{border-style:double}
+        #border-style7{border-style:groove}
+        #border-style8{border-style:inset}
+        #border-style9{border-style:outset}
+        #border-style10{border-style:ridge}
+    </style>
+</head>
+<body>
+    <div class="border-test" id="border-style1">border-style none</div>
+    <div class="border-test" id="border-style2">border-style hidden </div>
+    <div class="border-test" id="border-style3">border-style solid</div>
+    <div class="border-test" id="border-style4">border-style dotted</div>
+    <div class="border-test" id="border-style5">border-style dashed</div>
+    <div class="border-test" id="border-style6">border-style double</div>
+    <div class="border-test" id="border-style7">border-style groove</div>
+    <div class="border-test" id="border-style8">border-style inset</div>
+    <div class="border-test" id="border-style9">border-style outset</div>
+    <div class="border-test" id="border-style10">border-style ridge</div>
+
+<hr>
+    <div class="border-test" style="border-width: 1px; border-style: solid; border-color: red;">border-color:red</div>
+    <div class="border-test" style="border: 1px solid red;">border</div>
+    <div class="border-test" style="border: 1px solid red; border-radius: 50%;">border-radius</div>
+    <img class="img-border" src="img/wallpaper.jpg">
+
+    <div class="border-test" style="border-top-left-radius: 10px; border-bottom-left-radius: 20px; border: 1px solid black;"></div>
+</body>
+</html>

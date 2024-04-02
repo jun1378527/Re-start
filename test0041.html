@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;
+        padding: 0;}
+        #pos1{
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+        #pos2{
+            position: absolute;
+            right: 100px;
+            top: 100px;
+        }
+        #pos3{
+            position: absolute;
+            left: 100px;
+            bottom: 100px;
+        }
+        .absolute-container{
+            position: relative;
+            height: 500px;
+            width: 400px;
+            border: 1px solid rebeccapurple;
+            margin: 10px;
+        }
+        .absolute-container p{
+            border: 1px solid black;
+            width: 100px;
+        }
+        .relative-container p{
+            width: 100px;
+        }
+        #pos4{position: relative; left: 50px;}
+        #pos5{position: relative;}
+    </style>
+</head>
+<body>
+    
+    <div id="header"></div>
+    <div class="absolute-container">
+        <p id="pos1">글 11 글 1 글 1 글 1 글 1 글 1 글 1 글 1 </p>
+        <p id="pos2">글 2 글 2 글 2 글 2 글 2 글 2 글 2 글 2 글 2 글 2글 2 글 2 글 2 글 2 글 2 글 2 글 2 글 2 글 2 글 2 </p>
+        <p id="pos3">글 3 글 3 글 3 글 3 글 3 글 3 </p>
+    </div>
+    <div class="relative-container">
+        <p id="pos4">글 4 글 4 글 4 글 4 글 4 글 4 글 4 글 4 </p>
+        <p id="pos5"> 글 5 글 5 글 5 글 5 글 5 글 5 글 5 </p>
+    </div>
+
+
+    <div>
+        <h1>position 속성값</h1>
+        <p>static: 기본값</p>
+        <p>relative: static과 비슷한데 이동 가능</p>
+
+    </div>
+</body>
+</html>

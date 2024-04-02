@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .test{width: 100px; height: 100px; }
+        #margin .test{
+            background-color: beige; float: left;
+        }
+        #margin1{margin: 50px;}
+        #margin2{margin: 30px 50px;}
+        #margin3{margin: 30px 20px 50px;}
+        #margin4{margin: 30px 40px 50px 60px;}
+        #padding1{padding: 50px;}
+        #padding2{padding: 30px 50px;}
+        #padding3{padding: 30px 20px 50px;}
+        #padding4{padding: 30px 40px 50px 60px;}
+
+        #padding .test{
+            background-color: blue;
+            margin-top: 10px;
+        }
+
+        #banner{
+            background-color: beige;
+            width: 100%;
+            height: 200px;
+            margin-top: 50px;
+        }
+        #item{
+            height: 200px;
+            width: 20%;
+            background-color: brown;
+            margin: auto;
+        }
+        .container {
+            clear: both;
+        }
+        #margin-overlap .test{
+            background-color: aqua;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="margin">
+        <div class="test" id="margin1"></div>
+        <div class="test" id="margin2"></div>
+        <div class="test" id="margin3"></div>
+        <div class="test" id="margin4"></div>
+    </div>
+
+    <div class="container" id="banner">
+        <div id="item"></div>
+    </div>
+
+    <div class="container" id="margin-overlap">
+        <div class="test"></div>
+        <div class="test"></div>
+        <div class="test"></div>
+    </div>
+    
+    <div class="container" id="padding">
+        <div class="test" id="padding1"></div>
+        <div class="test" id="padding2"></div>
+        <div class="test" id="padding3"></div>
+        <div class="test" id="padding4"></div>
+    </div>
+
+
+</body>
+</html>

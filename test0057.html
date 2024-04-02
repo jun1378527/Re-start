@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            display: inline-block;
+        }
+
+        #width {
+            background-color: skyblue;
+            transition: width 2s, background-color 2s;
+        }
+        #width:hover {
+            width: 200px;
+            background-color: deepskyblue;
+        }
+        #widthheight{
+            background-color: aquamarine;
+            transition: width 2s, height 3s, background-color 3s;
+        }
+        #widthheight:hover{
+            width: 300px;
+            height: 200px;
+            background-color: purple;
+        }
+        #height {
+            background-color: palegreen;
+            transition: height 2s, background-color 2s;
+        }
+        #height:hover {
+            height: 200px;
+            background-color: mediumseagreen;
+        }
+
+        #background-color {
+            background-color: salmon;
+            transition: background-color 2s;
+        }
+        #background-color:hover {
+            background-color: darkblue;
+        }
+
+        #rotate {
+            background-color: khaki;
+            transition: transform 2s, background-color 2s;
+        }
+        #rotate:hover {
+            transform: rotate(45deg);
+            background-color: goldenrod;
+        }
+    </style>
+</head>
+<body>
+
+<div id="width" class="box">너비 변경</div>
+<div id="height" class="box">높이 변경</div>
+<div id="widthheight" class="box">둘 다 변경</div>
+<div id="background-color" class="box">배경색 변경</div>
+<div id="rotate" class="box">회전</div>
+
+</body>
+</html>

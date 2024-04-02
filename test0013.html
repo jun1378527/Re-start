@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="serverFunction" method="get">
+        <input type="hidden" name="customer_type" value="vvip">
+
+
+        <label for="name">이름:</label><br>
+        <input type="text" id="name" name="name"><br>
+        
+        <label for="email">이메일:</label><br>
+        <input type="email" id="email" name="email" placeholder="abcd@naver.com"><br>
+        
+        <label for="password">비밀번호:</label><br>
+        <input type="password" id="password" name="password"><br>
+        
+        <label for="search">검색</label><br>
+        <input type="search" id="search" name="search" placeholder="검색어를 입력하세요"><br>
+        <label for="url">url</label><br>
+        <input type="url" id="url" name="url" placeholder="url을 입력하세요"><br>
+        
+        <input type="submit" value="가입하기">
+    </form>
+    <!-- http://127.0.0.1:5500/register.php?name=%EB%B0%94%EB%82%98%EB%82%98&email=&password= -->
+</body>
+</html>

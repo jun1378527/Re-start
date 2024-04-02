@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #container:hover div{
+            width: 300px;
+        }
+        .box{margin: 20px; text-align: center; background-color: lightsalmon; width: 100px; height: 20px; transition: 4s}
+
+        #box1 { transition-timing-function: ease; }
+        #box2 { transition-timing-function: linear; }
+        #box3 { transition-timing-function: ease-in; }
+        #box4 { transition-timing-function: ease-out; }
+        #box5 { transition-timing-function: ease-in-out; }
+        #box6 { transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1); }
+        #box7 { transition-timing-function: cubic-bezier(0, 0, 1, 1); }
+        #box8 { transition-timing-function: cubic-bezier(0.42, 0, 1, 1); }
+        #box9 { transition-timing-function: cubic-bezier(0, 0, 0.58, 1); }
+        #box10 { transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
+    </style>
+
+
+</head>
+<body>
+    <div id="container">
+        <div class="box" id="box1"> ease </div>
+        <div class="box" id="box2"> linear </div>
+        <div class="box" id="box3"> ease-in </div>
+        <div class="box" id="box4">ease-out</div>
+        <div class="box" id="box5">ease-in-out</div>
+        <div class="box" id="box6">cubic-bezier(ease)</div>
+        <div class="box" id="box7">cubic-bezier(linear)</div>
+        <div class="box" id="box8">cubic-bezier(ease-in)</div>
+        <div class="box" id="box9">cubic-bezier(ease-out)</div>
+        <div class="box" id="box10">cubic-bezier(ease-in-out)</div>
+    </div>
+</body>
+</html>

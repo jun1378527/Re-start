@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section p{}
+        section > p{}
+        h1 + p{}
+        h1 ~ p{}
+
+        #space p{color: blue;}
+        #parent-child > p{color: red;}
+        #adj + p{background-color: black; color: white;}
+        #sbl ~ p{background-color: black; color: white;}
+    </style>
+</head>
+<body>
+    <h1>연결 선택자</h1>
+    <p>빈칸, >, +, ~</p>
+    
+    <section id="space">
+        <h2>하위 선택자</h2>
+        <p>section p{}</p>
+        <h1>예약 방법 & 요금</h1>
+        <p>온라인 예약 신청이...</p>
+        <div>
+            <p>가족실 : 60000원</p>
+            <p>4인 공용 : 25000원</p>
+        </div>
+    </section>
+    <section id="parent-child">
+        <h2>자식 선택자</h2>
+        <p>#parent-child > p{} </p>
+        <h1>예약 방법 & 요금</h1>
+        <p>온라인 예약 신청이...</p>
+        <div>
+            <p>가족실 : 60000원</p>
+            <p>4인 공용 : 25000원</p>
+        </div>
+    </section>
+    
+    <section>
+        <h2>인접 형제 vs 형제</h2>
+        <p>#adj + p{}</p>
+        <h1 id="adj">예약 방법 & 요금</h1>
+        <p>온라인 예약 신청이...</p>
+        <div>
+            <p>가족실 : 60000원</p>
+            <p>4인 공용 : 25000원</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>형제 선택자</h2>
+        <p>#sbl~ p{}</p>
+        <h1 id="sbl">예약 방법 & 요금</h1>
+        <p>온라인 예약 신청이...</p>
+        <div>
+            <p>가족실 : 60000원</p>
+            <p>4인 공용 : 25000원</p>
+        </div>
+    </section>
+
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+li.new::before{
+    content:"  NEW!!";
+    font-size: x-small;
+    background-color: red;
+    color: white;
+    padding: 2px 4px;
+    border-radius: 2px;
+    margin: 0 10px;
+    text-align: center;
+}
+/* li.new::after{
+    content:"  NEW!!";
+    font-size: x-small;
+    background-color: red;
+    color: white;
+    padding: 2px 4px;
+    border-radius: 2px;
+    margin: 0 10px;
+    text-align: center;
+} */

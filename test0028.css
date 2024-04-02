@@ -1,0 +1,4 @@
+.contents :nth-child(3){background-color: beige;}
+.contents p:nth-of-type(3){background-color: aquamarine;}
+.contents p:nth-of-type(odd){color: red;}
+.contents p:nth-of-type(even){color: brown;}
