@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        
+
+        alert("이 창은 alert입니다.")
+        var reply = confirm("really? yes/no . if you select one choice you can't change any more")
+        console.log("확인 결과:", reply) // true / false
+        
+        var name = prompt("확인 결과:", reply)
+        console.log("prompt 결과:", name)
+        
+        document.write("<p>동적으로 만든 DOM</p>")
+
+        var number = 2;
+        if(number > 10 ){
+            document.write("<p>와 많아요!</p>");
+        }
+        else{
+            document.write("<p>적어요</p>");
+        }
+    </script>
+</body>
+</html>

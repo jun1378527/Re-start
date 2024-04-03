@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // var a = 1;
+        // var b = 2;
+        // var aa = 1; var bb =2;
+
+
+        var name;
+        name = "hj";
+        var grade = 4;
+            // 변수 - 기본 유형
+        var a = 1;
+        var b = 1.2;
+        var c = "hj";
+            // 변수 - 배열
+        var mathpointsOfStudents = [90, 80, 70];
+        console.log("배열:", mathpointsOfStudents);
+        console.log(mathpointsOfStudents.length);
+        console.log(mathpointsOfStudents[1]);
+            // 변수 - 객체
+        var student = {
+            name : "hj seo",
+            major : "computer engineering"
+        }
+
+        var forUndefined;
+        console.log("typeof_forUndefined", typeof(forUndefined));
+
+        // var forNull = null;
+        // console.log("typeof_forNull", typeof(forNull));
+
+        var forNull = null;
+        if (forNull === null){
+            console.log("null 검출");
+        }else{
+            console.log("null 아님");
+        }
+
+        console.log("5%3",)
+        for(let i = 0; i <= 10; i++){
+            if(i % 3 == 0){
+                document.write("<span> 짝</span>");
+            }else{
+                document.write("<span>"+i+"</span>")
+            }
+        }
+
+        var a = 10
+        var b = a++ + 5;
+        console.log("b:", b); // b == 15
+        var a = 10
+        var b = ++a + 5;
+        console.log("b:", b); // b == 16
+
+        console.log(false && 3/0);
+        console.log(0.1+0.2 === 0.3);
+    </script>
+
+
+</body>
+</html>
