@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var Depth = 19.4;
+        var day_m = 3;
+        var night_m = 2;
+        var now_m = 0;
+        var days = 0
+
+        while(now_m < Depth){
+            now_m += day_m;
+            
+            if (now_m > Depth){
+                break;
+            }
+            now_m -= night_m
+            days++
+        }
+
+        document.write(days)
+
+    </script>
+
+</body>
+</html>

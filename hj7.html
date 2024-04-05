@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        어떤 프로그램은 임의의 자연수에 대해서 그 결과가 1이 나올 때 까지, 아래의 작업을 반복한다
+        자연수가 짝수이면 2로 나눈다. 홀수이면 3을 곱하고 1을 더한 후, 2로 나눈다.
+
+        예를 들어, 자연수 5에서 시작했다면, 5 -> 8 -> 4 -> 2 -> 1 의 순서로
+        값이 변하며 마지막에 1에 도달하게 된다. 이때에 실행한 작업의 횟수는
+        4회이다. 그렇다면 682는 위의 작업을 몇 회 실행했을 때 1에 도달하게 될까?
+        프로그램으로 구해보자.
+        답: 11회
+    </p>
+
+    <script>
+
+
+        var x = 682;
+        var count = 0;
+
+        while(true){
+            if (x == 1){
+                break;
+            }else{
+                if (x % 2 ===0){
+                    x /= 2;
+                }else{
+                    x = (x*3 +1)/2
+                }
+                count ++
+            }
+        }
+        document.write(count)
+
+    </script>
+
+
+
+
+<!-- 
+x는 5
+카운트는 0
+x가 1이 아닐때 반복
+x
+
+ -->
+
+
+
+</body>
+</html>
