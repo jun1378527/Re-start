@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>for 반복문</h1>
+    <script>
+        var sumVal = 0;
+        for(var i = 0; i < 6; i++){
+            document.write(`<p>현재 i는 ${i}입니다.</p>`);
+            sumVal = sumVal + i;
+        }
+        document.write(`<p>현재 sumVal는 ${sumVal}입니다.</p>`);
+    </script>
+
+    <h1>while 반복문</h1>
+    <script>
+        var sumVal = 0;
+        var i = 0;
+        while (i < 6){
+            document.write(`<p>현재 i는 ${i}입니다.</p>`);
+            sumVal = sumVal + i; 
+            i++
+        }
+        document.write(`<p>최종 sumVal은 ${sumVal}입니다.</p>`);
+    </script>
+
+    <h1>do-while 반복문</h1>
+    <script>
+        var sumVal = 0;
+        var userNumber = 0;
+        do{
+            userNumber = prompt("자연수 입력하세요. 마치려면 0 입력하세요")
+            userNumber = parseInt(userNumber)
+            sumVal += userNumber;
+        }while(userNumber > 0)
+        document.write(`<p>현재 sumVal는 ${sumVal}입니다.</p>`)
+
+    </script> -->
+
+    <h1>break vs continue</h1>
+    <p>반복문을 멈추는 break, 건너뛰는 continue</p>    
+
+    <!-- <script>
+        var myCount = 0;
+        var isSick = 0;
+        for(var day = 1; day <= 90; day++){
+            isSick++;
+            if (isSick >= 80) break;
+            if (isSick % 10 == 0) continue;
+            myCount++;
+        }
+        document.write(`<span>${myCount}일 참여 함~</span>`)
+    </script> -->
+
+    <script>
+        var myDayCount = 0;
+        var myTimeCount = 0;
+        for(var day = 1; day <= 90; day++){
+            for(var time =1; time<=8; time++){
+                myTimeCount++;
+            }
+            myDayCount++;
+        }
+        document.write(`<span>${myDayCount}일${myTimeCount}시간 참여 함~</span>`)
+    </script>
+
+    <script>
+        // for(var i =2; i <=9; i++){
+        for(var dan =2; dan <=9; dan++){
+            document.write(`<h1>${dan}</h1>`)
+            for(var gopsu = 1; gopsu <= 9; gopsu++){
+                document.write(`<p>${dan} x ${gopsu} = ${dan*gopsu}</p>`)
+            }
+
+        }
+    </script>
+
+
+</body>
+</html>

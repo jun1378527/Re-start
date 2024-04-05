@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>자리 배치도</h1>
+    <script>
+        var totalNum = prompt("전체 몇 명?");
+        var colMax = prompt("How many people in a line?");
+        var rowNum = 0;
+
+        if(totalNum % colMax === 0)
+            rowNum = parseInt(totalNum / colMax);
+        else
+            rowNum  = parseInt(totalNum / colMax) + 1;
+
+
+        document.write(`<p>모두 ${rowNum} 줄 필요해요</p>`);
+
+
+    </script>
+</body>
+</html>

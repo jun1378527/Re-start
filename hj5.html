@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>사용자로부터 양수를 받아들이는 반복문을 작성한다. 프로그램은 입력된 값들의 평균, 최소값, 최대값을 출력한다. 사용자가 0을 입력하면 반복은 종료된다.</p>
+
+    <script>
+        var sum =0;
+        var count =0;
+        var min =Infinity;
+        var max =0;
+        
+
+
+        while (true){
+            var input = prompt("양수입력:")
+            var num = Number(input);
+
+            if (num === 0){
+                var avg = sum / count;
+                document.write(`<p>입력된 값의 평균은 ${avg}, 최소값은 ${min}, 최대값은 ${max}입니다 </p>`)
+                break;
+            }
+
+            if (num > 0){
+                sum += num;
+                count ++;
+                if(num < min) min = num
+                if(num > max) max = num
+            } else {
+                alert("양수만 입력해")
+            }
+        }
+    </script>
+
+
+<!-- <script>
+    var userNum = 0;
+    var minVal = 0;
+    var maxVal = 0;
+    var sumVal = 0;
+    var countVal = 1;
+
+    sumVal = maxVal = minVal = parseInt(prompt("자연수 입력"));
+    if(sumVal > 0){
+        while(true){
+            userNum = parseInt(prompt("자연수 입력"));
+            if(userNum == 0){
+                document.write(`<p>최대:${maxVal}, 최소:${minVal}, 평균:${sumVal/countVal}</p>`)
+                break;
+            }
+            if(userNum < 0) continue;
+            countVal++;
+            if(minVal > userNum) minVal = userNum;
+            if(maxVal < userNum) maxVal = userNum;
+            sumVal += userNum;
+
+        }
+    }
+    else if(sumVal == 0){
+        document.write("<p>바로 끝내네..</p>");
+    }else{
+        document.write("<p>음수 입력 하지 말구..</p>");
+    }
+     -->
+
+    
+
+</script>
+
+
+</body>
+</html>

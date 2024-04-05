@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>피타고라스 정리는 a*a + b*b = c*c 이다. A,b,c 각각 1이상 100이하의 범위를 갖는 정수라면
+        이 들 조합 중 피타고라스의 정리를 만족하는 조합은 몇 개나 있는지 답하는 프로그램을 작성해보자.(단, 3중첩 반복문을 사용한다.)
+    </p>
+    
+    <script>
+        var count = 0;
+        for (var a = 1; a <= 100; a++) {
+            for (var b = 1; b <= 100; b++) { 
+                var c = Math.sqrt(a * a + b * b);
+                if (c % 1 === 0 && c <= 100) {
+                    count++;
+                }
+            }
+        }
+        document.write(count)
+    </script>
+
+
+</body>
+</html>

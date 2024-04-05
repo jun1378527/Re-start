@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var s_Num = parseInt(prompt("시작 정수를 입력하세요:"));
+        var e_Num = parseInt(prompt("종료 정수를 입력하세요:"));
+
+        var sum = 0;
+
+        for (var i = s_Num; i <= e_Num; i++) {
+            sum += i; 
+        }
+
+        document.write(`<p>결과는 ${sum}입니다.</p>`);
+    </script>
+    
+</body>
+</html>

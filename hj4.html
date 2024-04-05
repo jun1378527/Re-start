@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #sqaure{
+            font-family: monospace;
+            letter-spacing: 10px;
+            line-height: 1.1;
+        }
+    </style>
+</head>
+<body>
+    <h1>1234567</h1>
+    <div id="sqaure"></div>
+    <script>
+        var aws = ''; 
+
+        for (var i = 1; i <= 7; i++) {
+            for (var num = 1; num <= i; num++) {
+                aws += num ; 
+            }
+            for (var star = i+1; star <=7; star++){
+                aws += "*";
+            }
+            aws += "<br>";
+        }
+        document.getElementById("sqaure").innerHTML = aws;
+    </script>
+</body>
+</html>
