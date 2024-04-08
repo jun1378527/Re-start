@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #desc{
+            display: none;
+            width: 300px;
+            box-sizing: border-box;
+        }
+        #item{
+            position: relative;
+        }
+        #item img{
+            display: block;
+            width: 300px;
+
+        }
+        #open{
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgb(255, 255, 255, 0.5);
+            border: none;
+        }
+        #close{
+            background-color: rgba(255, 255, 255, 0.5);
+            border: solid 1px rgba(151, 151, 151, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div id="item">
+        <img src="img/flower.jpg" alt="">
+        <button class="over" id="open" onclick="showDetail()">상세 설명 보기</button>
+        <div id="desc" class="detail">
+            <h4>등심붓꽃</h4>
+            <p>북아메리카 원산으로 각지에서 관상초로 흔히 심고 있는 귀화식물이다. 길가나 잔디밭에서 흔히 볼 수 있다. 아주 작은 씨앗......................................................................번식한다.</p>
+            <button id="close" onclick="hideDetail()">상세 설명 닫기</button>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        function showDetail(){
+            document.querySelector('#desc').style.display = "block";
+            document.querySelector('#open').style.display = "none";
+        }
+        
+        
+        
+        function hideDetail(){
+            document.querySelector('#desc').style.display = "none";
+            document.querySelector('#open').style.display = "block";
+        }
+        
+
+
+
+
+
+    </script>
+</body>
+</html>

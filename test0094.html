@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function addNumber(num1, num2){ // num1, num2: 매개 변수
+        //     let sum = num1 + num2;
+        //     return sum;
+        // }
+        // let result = addNumber(2, 3); // 2,3 : 인수
+        // console.log(result);
+
+        // function printMe(name, age, major='IT'){
+        //     console.log(`내 이름은 ${name}입니다. 저는 ${age}살 이고, 전공은 ${major} 입니다.`);
+        // }
+        
+        // printMe('준기', 27, 'AI융합학과');
+        // printMe('고준기', 27);
+        // printMe('고준기', 27, '경제학과');
+        
+        // function printMe2(name, major='IT',age){
+        //     console.log(`내 이름은 ${name}입니다. 저는 ${age}살 이고, 전공은 ${major} 입니다.`);
+        // }
+        
+        // printMe2('고준기',"IT",11);
+        // printMe2('고준기',11);
+        // printMe2('고준기',"IT",344);
+
+        const addNumber2 = function (num1, num2){
+            let sum = num1 + num2;
+            return sum;
+        }
+        const result2 = addNumber2(2, 3);
+        console.log(result2);
+
+
+        (function (){
+            var userName = prompt("이름?");
+            console.log(userName);
+        }());
+
+        const addNumber3 = (num1, num2)=>{
+            let sum = num1 + num2;
+            return sum;
+        }
+
+        const addNumber4 = (num1)=>{
+            let num2 = 2;
+            let sum = num1 + num2;
+            return sum;
+        }
+        const addNumber5 = ()=> 1+2;
+
+        const addNumber6 = num1=>{
+            let num2 = 2;
+            let sum = num1 + num2;
+            return sum;
+        }
+
+
+    </script>
+</body>
+</html>
