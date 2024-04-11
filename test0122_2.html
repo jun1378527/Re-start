@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+ 
+            border: 1px black solid;
+            width: 600px;
+            height: 500px;
+            justify-content: space-between;
+            position: relative;
+        }
+        .arrow{
+            font-size: 24px;
+            user-select: none;
+            z-index: 10;
+        }
+        #left{
+            position: absolute;
+            left: 20px;
+        }
+        #right{
+            position: absolute;
+            right: 20px;
+        }
+    </style>
+</head>
+<body> 
+    <h1>이미지 캐러셀 입니다. 좌우 화살표를 눌러보세요.</h1>
+    <div class="container">  
+        <div class="arrow" id="left">&lang;</div>
+        <div class="arrow" id="right">&rang;</div>
+    </div>
+
+
+    <script>
+        const container = document.querySelector(".container");
+        const arrows = document.querySelectorAll(".arrow");
+        const pics = [
+            "img/간장새우장.jpg",
+            "img/새우감바스.jpg",
+            "img/새우구이.jpg",
+            "img/새우머리버터구이.jpg",
+            "img/새우튀김.jpg"
+        ];
+        container.style.backgroundImage = `url(${pics[0]})`;
+        container.style.backgroundSize ='cover';
+        let i = 0;
+        arrows.forEach(
+            arrow=>{
+                arrow.addEventListener("click", (event)=>{
+                    if(event.target.id ==="left"){
+                        i--;
+                        if(i < 0){i = pics.length - 1};
+                    }
+                    else if(event.target.id ==="right"){
+                        i++;
+                        if(i >= pics.length){i=0};
+                    }
+                    container.style.backgroundImage = `url(${pics[i]})`
+                })
+            }
+        );
+    </script>
+        
+</body>
+</html>

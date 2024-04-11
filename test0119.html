@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="info"></div>
+    <button onclick="addC()">이미지 추가</button>
+    <script>
+        function addC(){
+            let newImg = document.createElement("img");
+            let src = document.createAttribute("src");
+            src.value = "img/images.png"
+            newImg.setAttributeNode(src);
+            document.getElementById("info").appendChild(newImg);
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dom에서 form 다루기</h1>
+    <div id="container">
+        <h2>수강 신청</h2>
+        <form name="testForm" action="">
+            <fieldset>
+                <legend>신청인</legend>
+                    <ul>
+                        <li>
+                            <label class="reg" for="userName">이름</label>
+                            <input type="text" id="userName" name="userName">
+                        </li>
+                        <li>
+                            <label class="reg" for="major">학과</label>
+                            <select type="major" id="major" name="major">
+                                <option>--- 학과를 선택하세요 ---</option>
+                                <option value="it">IT전공</option>
+                                <option value="design">디자인전공</option>
+                                <option value="economy">상경전공</option>
+                                <option value="culture">문화전공</option>
+                                <option value="guard">경호전공</option>
+                                <option value="archi">건축전공</option>
+                            </select>
+                        </li>
+                    </ul>
+            </fieldset>
+            <fieldset>
+                <legend>신청 과목(radio btn)</legend>
+                <p>이달에 신청할 과목을 선택하자.</p>
+                <label><input name="subject" value="speaking" type="radio">회화</label>
+                <label><input name="subject" value="frontend" type="radio">frontend</label>
+                <label><input name="subject" value="backend" type="radio">backend</label>
+            </fieldset>
+            <fieldset>
+                <legend>메일 서비스(checkbox)</legend>
+                <p>메일링 서비스를 신청해보세요.</p>
+                <label><input name="mailing" value="db" type="checkbox">db</label>
+                <label><input name="mailing" value="react" type="checkbox">react</label>
+                <label><input name="mailing" value="nodejs" type="checkbox">nodejs</label>
+            </fieldset>
+
+
+
+
+
+
+
+        </form>
+    </div>
+</body>
+</html>
