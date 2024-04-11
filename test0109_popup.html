@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const loadURL = (url) =>{
+            window.opener.location=url;
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <a href="test0109_next.html" onclick="loadURL(this.href); return false;">다음 컨텐츠</a>
+</body>
+</html>

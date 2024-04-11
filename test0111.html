@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="openPopup()">Open Popup</button>
+    <script>
+        function openPopup() {
+            var left = (screen.availWidth - 500) / 2;
+            var top = (screen.availHeight - 400) / 2;
+            window.open("test0106_popup.html", "", `width=500, height=400, left=${left}, top=${top}`);
+        }
+    </script>
+</body>
+</html>

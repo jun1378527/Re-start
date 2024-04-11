@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 650px; 
+            margin: auto;
+            text-align: center; 
+        }
+        .big-image {
+            width: 100%; 
+            margin: 20px 0;
+            cursor: pointer; 
+        }
+        .small-images {
+            display: flex;
+            justify-content: space-between; 
+            width: 100%; 
+        }
+        .small-image {
+            width: calc(33% - 7px); 
+            cursor : pointer;
+            transition: transform 0.2s; 
+        }
+        .small-image:hover {
+            transform: scale(1.1); 
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+
+        <img src="img/coffee-blue.jpg" alt="" class="big-image" id="bigImage">
+        
+
+        <div class="small-images">
+            <img id="blue" src="img/coffee-blue.jpg" alt="" class="small-image">
+            <img id="gray" src="img/coffee-gray.jpg" alt="" class="small-image">
+            <img id="pink" src="img/coffee-pink.jpg" alt="" class="small-image">
+        </div>
+    </div>
+
+    <script>
+        
+        document.querySelectorAll('.small-image').forEach(image => {
+            image.addEventListener('click', function() {
+                document.getElementById('bigImage').src = this.src; 
+            });
+        });
+
+
+        document.getElementById('bigImage').addEventListener('click', function() {
+            alert(this.src);
+        });
+    </script>
+</body>
+</html>
