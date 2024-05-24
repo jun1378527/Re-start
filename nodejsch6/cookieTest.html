@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Test</title>
+</head>
+<body>
+    <button onclick="set_my_cookie()">쿠키를 설정하자</button>
+    <button onclick="get_my_cookie()">쿠키를 살펴보자</button>
+    <button onclick="reset_my_cookie()">쿠키를 리셋하자</button>
+
+    <script>
+        document.cookie = "username=june2it";
+
+        function set_my_cookie() {
+            document.cookie = "username=hdfdfdfdfdfㅁㄴㅇㄹ";
+        }
+
+        function get_my_cookie() {
+            alert(document.cookie);
+        }
+
+        function reset_my_cookie() {
+            document.cookie = "username=;";
+        }
+    </script>
+</body>
+</html>
