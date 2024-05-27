@@ -3,15 +3,19 @@ const path = require("path");
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
+const dotenv = require("dotenv");
 const multer = require("multer");
 const fs = require("fs");
-const dotenv = require("dotenv");
+const indexRouter = require("./routes"); //routes 폴더의 index
+const userRouter = require("./routes/user"); //routes 폴더의 user.js
 
 dotenv.config();
 
 const app = express();
-
 app.set("port", process.env.PORT || 3000);
+
+app.use("/", indexRouter);
+app.use("/user", userRouter);
 
 // 쿠키 파싱 미들웨어에 비밀 키 추가
 app.use(cookieParser(process.env.COOKIE_SECRET || "default_secret_key"));
@@ -41,22 +45,23 @@ app.use(
 try {
   fs.readdirSync("uploads");
 } catch (err) {
-  fs.mkdirSync("uploads");
+  fs.mkdirSync("uploads"); // upload받을 폴더가 없을 시 서버에 폴더 생성
 }
 
 const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "uploads/");
+  destination(req, file, done) {
+    done(null, "uploads/"); // 업로드 폴더로
   },
-  filename: function (req, file, cb) {
-    cb(
-      null,
-      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
-    );
+  filename(req, file, done) {
+    const ext = path.extname(file.originalname);
+    done(null, path.basename(file.originalname, ext) + Date.now() + ext);
   },
 });
 
-const upload = multer({ storage: storage });
+const upload = multer({
+  storage: storage, // 저장할 곳
+  limits: { fileSize: 5 * 1024 * 1024 }, // 파일 사이즈 한계 용량
+});
 
 // 정적 파일 제공
 app.use(express.static(path.join(__dirname, "public")));
@@ -92,7 +97,12 @@ app.get("/cookie_reset", (req, res) => {
   res.send("쿠키를 삭제했음");
 });
 
-// 파일 업로드 라우트
+// 파일 업로드 폼 페이지 제공
+app.get("/upload", (req, res) => {
+  res.sendFile(path.join(__dirname, "multipart.html"));
+});
+
+// 파일 업로드 라우트 (단일 파일 업로드)
 app.post("/upload", upload.single("image"), (req, res) => {
   const title = req.body.title;
   const image = req.file;
@@ -101,11 +111,66 @@ app.post("/upload", upload.single("image"), (req, res) => {
   console.log("File:", image);
 
   if (!image) {
-    return res.status(400).send("No file uploaded.");
+    return res.status(400).send("파일 없어요.");
   }
 
   res.send(`File uploaded: ${image.filename}, Title: ${title}`);
 });
+
+// 파일 업로드 폼 페이지 제공 (다중 파일 업로드)
+app.get("/upload2", (req, res) => {
+  res.sendFile(path.join(__dirname, "multipart2.html"));
+});
+
+// 파일 업로드 라우트 (다중 파일 업로드)
+app.post("/upload2", upload.array("many"), (req, res) => {
+  const title = req.body.title;
+  const files = req.files; // 여러 파일을 처리하기 위해 req.files 사용
+
+  console.log("Title:", title);
+  console.log("Files:", files);
+
+  if (!files || files.length === 0) {
+    return res.status(400).send("파일 없어요.");
+  }
+
+  res.send(
+    `Files uploaded: ${files
+      .map((file) => file.filename)
+      .join(", ")}, Title: ${title}`
+  );
+});
+
+// 파일 업로드 폼 페이지 제공 (두 개의 파일 필드)
+app.get("/upload3", (req, res) => {
+  res.sendFile(path.join(__dirname, "multipart3.html"));
+});
+
+// 파일 업로드 라우트 (두 개의 파일 필드)
+app.post(
+  "/upload3",
+  upload.fields([
+    { name: "image1", maxCount: 1 },
+    { name: "image2", maxCount: 1 },
+  ]),
+  (req, res) => {
+    const title = req.body.title;
+    const files = req.files;
+
+    console.log("Title:", title);
+    console.log("Files:", files);
+
+    if (!files || (!files.image1 && !files.image2)) {
+      return res.status(400).send("파일 없어요.");
+    }
+
+    res.send(
+      `Files uploaded: ${Object.keys(files)
+        .map((key) => files[key].map((file) => file.filename).join(", "))
+        .join(", ")}, Title: ${title}`
+    );
+  }
+);
 
 // /myerror 페이지 라우트 핸들러 - 일부러 에러 발생
 app.get("/myerror", (req, res, next) => {
@@ -121,5 +186,5 @@ app.use((err, req, res, next) => {
 
 // 서버 시작
 app.listen(app.get("port"), () => {
-  console.log(`서버가 이 포트에서 실행중임 ${app.get("port")}`);
+  console.log(`서버가 이 포트에서 실행 중입니다: ${app.get("port")}`);
 });
