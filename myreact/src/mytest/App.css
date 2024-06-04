@@ -1,0 +1,36 @@
+.App {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 200px 1fr;
+  height: 100vh;
+  text-align: center;
+}
+
+.App-header {
+  grid-area: header;
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.App-sidebar {
+  grid-area: sidebar;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.App-main {
+  grid-area: main;
+  padding: 20px;
+}
+
+.App-footer {
+  grid-area: footer;
+  background-color: #282c34;
+  color: white;
+  padding: 10px;
+}

@@ -1,0 +1,57 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.App-header a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+.App-nav {
+  background-color: #f8f8f8;
+  padding: 10px 0;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.App-nav ol {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.App-nav ol li {
+  margin: 0 15px;
+}
+
+.App-nav ol li a {
+  text-decoration: none;
+  color: #282c34;
+  font-weight: bold;
+}
+
+.App-article {
+  padding: 20px;
+  background-color: #fff;
+  margin: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.App-article h2 {
+  color: #282c34;
+}
+
+.App-article p {
+  color: #555;
+}

@@ -1,0 +1,21 @@
+.App-sidebar {
+  background-color: #f4f4f4;
+  padding: 20px;
+  width: 200px;
+  height: calc(100vh - 260px); /* 헤더와 푸터를 제외한 높이 */
+  position: absolute;
+  left: -220px; /* 기본적으로 숨김, 너비보다 조금 더 */
+  transition: transform 0.3s ease;
+  transform: translateX(-100%); /* 숨김 상태에서 왼쪽으로 이동 */
+}
+
+.App-sidebar.visible {
+  transform: translateX(220px); /* 보이는 상태로 이동 */
+}
+
+.toggle-button {
+  margin: 10px;
+  position: absolute;
+  left: 10px; /* 버튼 위치 조정 */
+  top: 80px;
+}

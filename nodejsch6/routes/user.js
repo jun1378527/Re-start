@@ -1,38 +1,28 @@
-const express = require("express");
+const express = require('express');
+const { User } = require('../models'); // Sequelize User 모델 불러오기
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.send("User main page");
+// 새로운 사용자 생성
+router.post('/', async (req, res, next) => {
+  try {
+    const { username, password } = req.body;
+    const user = await User.create({ username, password });
+    res.status(201).json(user);
+  } catch (error) {
+    console.error(error);
+    next(error);
+  }
 });
 
-router.get("/user/:id", (req, res) => {
-  res.send(`<p>user ${req.params.id} page</p>`);
-});
-
-router.get("/abc", (req, res) => {
-  res.send("abc로 Get 보냈구나");
-});
-
-router.post("/abc", (req, res) => {
-  res.send("abc로 post 보냈구나");
-});
-
-// GET 및 POST 요청을 묶어서 처리
-router
-  .route("/abc2")
-  .get((req, res) => {
-    res.send("abc2로 GET 보냈구나");
-  })
-  .post((req, res) => {
-    res.send("abc2로 POST 보냈구나");
-  });
-
-router.get("/profile", (req, res) => {
-  res.send("User profile page");
-});
-
-router.get("/settings", (req, res) => {
-  res.send("User settings page");
+// 사용자 목록 조회
+router.get('/', async (req, res, next) => {
+  try {
+    const users = await User.findAll();
+    res.json(users);
+  } catch (error) {
+    console.error(error);
+    next(error);
+  }
 });
 
 module.exports = router;

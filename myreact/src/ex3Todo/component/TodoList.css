@@ -1,0 +1,12 @@
+.todo-list-container {
+  margin-top: 20px;
+}
+
+.todo-list-container h3 {
+  margin-bottom: 10px;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}

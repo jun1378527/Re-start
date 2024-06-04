@@ -2,7 +2,7 @@
     "development": {
       "username": "root",
       "password": "dbzlxoddl1",
-      "database": "nodejs",
+      "database": "nodejsch7_6",
       "host": "127.0.0.1",
       "dialect": "mysql"
     }

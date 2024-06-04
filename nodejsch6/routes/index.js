@@ -1,9 +1,7 @@
-const express = require("express");
-
+const express = require('express');
 const router = express.Router();
+const userRouter = require('./user'); // user 라우트 불러오기
 
-router.get("/", (req, res) => {
-  res.send("안녕 난 index router야");
-});
+router.use('/users', userRouter);
 
 module.exports = router;

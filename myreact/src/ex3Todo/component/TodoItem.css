@@ -1,0 +1,71 @@
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.todo-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.todo-item input[type="text"] {
+  flex-grow: 1;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.todo-text {
+  flex-grow: 1;
+}
+
+.todo-date {
+  margin-left: 10px;
+  font-size: 0.9em;
+  color: #888;
+}
+
+.edit-btn,
+.save-btn,
+.cancel-btn,
+.delete-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.edit-btn:hover,
+.save-btn:hover,
+.cancel-btn:hover {
+  background-color: #0056b3;
+}
+
+.save-btn,
+.edit-btn {
+  background-color: #28a745;
+}
+
+.save-btn:hover,
+.edit-btn:hover {
+  background-color: #218838;
+}
+
+.cancel-btn {
+  background-color: #dc3545;
+}
+
+.cancel-btn:hover,
+.delete-btn:hover,
+.delete-btn {
+  background-color: #c82333;
+}

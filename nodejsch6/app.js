@@ -8,6 +8,7 @@ const multer = require("multer");
 const fs = require("fs");
 const indexRouter = require("./routes"); //routes 폴더의 index
 const userRouter = require("./routes/user"); //routes 폴더의 user.js
+const { sequelize } = require("./models"); // Sequelize 인스턴스 불러오기
 
 dotenv.config();
 
@@ -182,9 +183,4 @@ app.get("/myerror", (req, res, next) => {
 app.use((err, req, res, next) => {
   console.error(err.message); // 에러 메시지 출력
   res.status(500).send(err.message); // 클라이언트에게 에러 메시지 전달
-});
-
-// 서버 시작
-app.listen(app.get("port"), () => {
-  console.log(`서버가 이 포트에서 실행 중입니다: ${app.get("port")}`);
 });
