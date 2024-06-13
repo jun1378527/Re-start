@@ -36,15 +36,17 @@ const App = () => {
   };
 
   return (
-    <div className="app">
-      <Header />
-      <TodoEditor addTodo={addTodo} />
-      <TodoList
-        todos={todos}
-        toggleComplete={toggleComplete}
-        removeTodo={removeTodo}
-        updateTodo={updateTodo}
-      />
+    <div className="container">
+      <div className="app">
+        <Header />
+        <TodoEditor addTodo={addTodo} />
+        <TodoList
+          todos={todos}
+          toggleComplete={toggleComplete}
+          removeTodo={removeTodo}
+          updateTodo={updateTodo}
+        />
+      </div>
     </div>
   );
 };

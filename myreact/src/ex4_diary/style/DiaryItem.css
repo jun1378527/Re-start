@@ -1,0 +1,21 @@
+.diary-item {
+  display: flex;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.img-section {
+  margin-right: 10px;
+}
+
+.info-section {
+  flex-grow: 1;
+}
+
+.btn-section {
+  display: flex;
+  align-items: center;
+}

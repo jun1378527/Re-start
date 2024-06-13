@@ -4,7 +4,10 @@ import "./index.css";
 // import App from "./ex2SimpleCounter/App";
 // import App from "./p80/App";
 // import App from "./ex3Todo/App";
-import App from "./CounterClassVSFunction/App";
+// import App from "./CounterClassVSFunction/App";
+// import App from "./propsDrillingRedux/App";
+// import App from "./propsDrillingReduxToolkit/App";
+import App from "./ex4_diary/App";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

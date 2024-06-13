@@ -1,0 +1,29 @@
+.level1 {
+  background-color: lightblue;
+  padding: 10px;
+  margin: 10px;
+}
+
+.level2 {
+  background-color: lightgreen;
+  padding: 10px;
+  margin: 10px;
+}
+
+.level3 {
+  background-color: lightcoral;
+  padding: 10px;
+  margin: 10px;
+}
+
+.level4 {
+  background-color: lightgoldenrodyellow;
+  padding: 10px;
+  margin: 10px;
+}
+
+.level5 {
+  background-color: lightgray;
+  padding: 10px;
+  margin: 10px;
+}

@@ -1,0 +1,18 @@
+.diarylist {
+  padding: 20px;
+}
+
+.menu-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.sort-col select {
+  padding: 5px;
+}
+
+.list-wrapper {
+  display: flex;
+  flex-direction: column;
+}
